@@ -487,6 +487,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 765
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badaee65b9068754080083be1ad0b2bb
+      internalID: 1323345653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauntlet
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 505
+        width: 313
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 84, z: 225, w: 84}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f991351598a3e814688a609325fbc3cc
+      internalID: 2047245974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -498,6 +540,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Sprites_9: 1323345653
       Sprites_2: 1855695242
       Sprites_7: -1238474789
       Sprites_3: 1298057146
@@ -507,6 +550,7 @@ TextureImporter:
       Reticle 4: -1252215216
       Sprites_0: 2023374020
       Reticle 5: 1730994088
+      gauntlet: 2047245974
       Sprites_4: 733224221
       Reticle 8: -1125045339
       Reticle 7: 131124071

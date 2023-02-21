@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //if (!GameManager.IsPlaying) return;
+        if (!GameManager.IsPlaying) return;
 
         if (Input.GetMouseButtonDown(0))
         {

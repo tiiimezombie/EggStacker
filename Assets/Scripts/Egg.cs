@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Egg : MonoBehaviour
 {
+    public static Vector3 OffScreen = new Vector3(100, 0, 0);
+
     private Rigidbody2D _rb;
     private Collider2D _collider;
     private SpriteRenderer _renderer;
@@ -22,6 +24,23 @@ public class Egg : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CollectionZone")) _inCollectionZone = true;
+        if (collision.CompareTag("LoseZone")) _inLoseZone = true;
+
+        if (!_held && _inLoseZone)
+        {
+            EggLost();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CollectionZone")) _inCollectionZone = false;
+        if (collision.CompareTag("LoseZone")) _inLoseZone = false;
+    }
+
     internal void Setup()
     {
         _rb.gravityScale = 0;
@@ -33,7 +52,7 @@ public class Egg : MonoBehaviour
 
     internal void Drop()
     {
-        _rb.gravityScale = 1;
+        _rb.gravityScale = .3f;
         _collider.enabled = true;
     }
 
@@ -43,26 +62,10 @@ public class Egg : MonoBehaviour
         _rb.velocity = Vector2.zero;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("CollectionZone")) _inCollectionZone = true;
-        if (collision.CompareTag("LoseZone")) _inLoseZone = true;
-
-        if (!_held && _inLoseZone)
-            GameManager.Instance.LoseGame();
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("CollectionZone")) _inCollectionZone = false;
-        if (collision.CompareTag("LoseZone")) _inLoseZone = false;
-    }
-
     public void Grab()
     {
         _held = true;
-        _rb.gravityScale = 0;
-        _rb.velocity = Vector2.zero;
+        Freeze();
     }
 
     public void Release()
@@ -77,7 +80,7 @@ public class Egg : MonoBehaviour
 
         if (_inLoseZone)
         {
-            GameManager.Instance.LoseGame();
+            EggLost();
             return;
         }
 
@@ -90,5 +93,12 @@ public class Egg : MonoBehaviour
         _rb.velocity = Vector2.zero;
         _collider.enabled = false;
         _renderer.color = _stackedColor;
+    }
+
+    private void EggLost()
+    {
+        EggStackManager.Instance.BreakEgg(this);
+        transform.position = OffScreen;
+        Freeze();
     }
 }

@@ -16,7 +16,7 @@ public class EggDropManager : MonoBehaviour
     private float _dropDelayMax;
 
     private System.Diagnostics.Stopwatch _speedUpStopwatch = new System.Diagnostics.Stopwatch();
-    private float _speedUpDelay = 1000 * 5;
+    private float _speedUpDelay = 1000 * 10;
 
     private void Awake()
     {

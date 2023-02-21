@@ -9,9 +9,12 @@ public class EggStackManager : MonoBehaviour
 {
     public static EggStackManager Instance;
 
+    [SerializeField] private LifeSystem _lifeSystem;
     [SerializeField] private TextMeshProUGUI _eggCountText;
+    [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private GameObject _reticle;
-    [SerializeField] private Animator _eggCrackAnimator;
+    //[SerializeField] private Animator _eggCrackAnimator;
+    [SerializeField] private ParticleSystem _crackParticles;
 
     private int StackCount
     {
@@ -20,15 +23,15 @@ public class EggStackManager : MonoBehaviour
         {
             _stackCount = value;
             _eggCountText.text = _stackCount + " Eggs!";
-            //_eggCountText.gameObject.dosca;
+            _eggCountText.transform.DOPunchScale(new Vector3(1.2f, 1.2f, 1), 0.4f, 1);
         }
     }
     private int _stackCount;
     private int _functionalStackCount;
 
 
-    private Vector2 _gridDimensions = new Vector2(10, 8);
-    private Vector2 _currentPosition = Vector2.zero;
+    private Vector2 _gridDimensions = new Vector2(10, 4);
+    private int _maxEggsPerGroup;
 
     private void Awake()
     {
@@ -38,6 +41,9 @@ public class EggStackManager : MonoBehaviour
         GameManager.SetPlaying += GameManager_SetPlaying;
 
         _reticle.SetActive(false);
+        //_crackParticles.Stop();
+        _crackParticles.transform.position = Egg.OffScreen;
+        _maxEggsPerGroup = Mathf.RoundToInt(_gridDimensions.x * _gridDimensions.y);
     }
 
     private void OnDestroy()
@@ -51,16 +57,17 @@ public class EggStackManager : MonoBehaviour
         if (obj)
         {
             StackCount = 0;
-            _currentPosition = Vector2.zero;
             _functionalStackCount = 0;
             _reticle.transform.position = NextEggLocation();
 
-            _eggCrackAnimator.transform.position = Egg.OffScreen;
-            _eggCrackAnimator.SetTrigger("Playing");
+            _crackParticles.Stop();
+            _crackParticles.transform.position = Egg.OffScreen;
+
+            _lifeSystem.ResetLives();
         }
         else
         {
-
+            _scoreText.text = "Final Score: " + _stackCount;
         }
     }
 
@@ -75,11 +82,8 @@ public class EggStackManager : MonoBehaviour
         _functionalStackCount++;
         _reticle.transform.position = NextEggLocation();
 
-        if (_functionalStackCount > 20)
-        {
-            Debug.Log("many egg");
+        if (_functionalStackCount > _maxEggsPerGroup)
             _functionalStackCount = 0;
-        }
     }
 
     internal void SetEggGrabbed(bool v)
@@ -91,8 +95,6 @@ public class EggStackManager : MonoBehaviour
     int gridsize = 16;
     private Vector3 NextEggLocation()
     {
-        Debug.Log(_nextLocation);
-
         _nextLocation.x = Mathf.FloorToInt(_functionalStackCount / _gridDimensions.y) - 6.5f;
         _nextLocation.y = _functionalStackCount % _gridDimensions.y - 3.25f;
 
@@ -101,9 +103,9 @@ public class EggStackManager : MonoBehaviour
 
     internal void BreakEgg(Egg egg)
     {
-        _eggCrackAnimator.transform.position = egg.transform.position;
-        _eggCrackAnimator.SetTrigger("Playing");
+        _crackParticles.transform.position = egg.transform.position;
+        _crackParticles.Play();
 
-        egg.transform.position = new Vector3(100, 0, 0);        
+        _lifeSystem.LoseLife();
     }
 }
