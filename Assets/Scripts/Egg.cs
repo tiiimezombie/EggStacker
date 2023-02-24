@@ -65,6 +65,7 @@ public class Egg : MonoBehaviour
     public void Grab()
     {
         _held = true;
+        AudioManager.Instance.PlaySFX_EggGrab();
         Freeze();
     }
 

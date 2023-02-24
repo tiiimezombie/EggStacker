@@ -13,7 +13,6 @@ public class EggStackManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _eggCountText;
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private GameObject _reticle;
-    //[SerializeField] private Animator _eggCrackAnimator;
     [SerializeField] private ParticleSystem _crackParticles;
 
     private int StackCount
@@ -30,7 +29,7 @@ public class EggStackManager : MonoBehaviour
     private int _functionalStackCount;
 
 
-    private Vector2 _gridDimensions = new Vector2(10, 4);
+    private Vector2 _gridDimensions = new Vector2(10, 8);
     private int _maxEggsPerGroup;
 
     private void Awake()
@@ -41,7 +40,6 @@ public class EggStackManager : MonoBehaviour
         GameManager.SetPlaying += GameManager_SetPlaying;
 
         _reticle.SetActive(false);
-        //_crackParticles.Stop();
         _crackParticles.transform.position = Egg.OffScreen;
         _maxEggsPerGroup = Mathf.RoundToInt(_gridDimensions.x * _gridDimensions.y);
     }
@@ -84,6 +82,8 @@ public class EggStackManager : MonoBehaviour
 
         if (_functionalStackCount > _maxEggsPerGroup)
             _functionalStackCount = 0;
+
+        AudioManager.Instance.PlaySFX_EggPlace();
     }
 
     internal void SetEggGrabbed(bool v)

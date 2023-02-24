@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _uiManager.SetUI(UIManager.UIType.Intro);
-        StartGame();
+        //StartGame();
     }
 
     public void StartGame()
@@ -37,5 +37,10 @@ public class GameManager : MonoBehaviour
 
         IsPlaying = false;
         SetPlaying?.Invoke(IsPlaying);
+    }
+
+    public void ToggleCredits()
+    {
+        _uiManager.SetUI(UIManager.UIType.Credits);
     }
 }

@@ -10,14 +10,18 @@ public class UIManager : MonoBehaviour
     {
         Intro,
         Retry,
-        Game
+        Game,
+        Credits,
     }
 
     [SerializeField] private GameObject _mainMenuGO;
     [SerializeField] private GameObject _replayMenuGO;
     [SerializeField] private GameObject _gameUIGO;
+    [SerializeField] private GameObject _creditsUIGO;
 
     [SerializeField] private Transform _titleTextGO;
+
+    private bool _showingCredits = false;
 
     void Start()
     {
@@ -29,6 +33,7 @@ public class UIManager : MonoBehaviour
         _mainMenuGO.SetActive(false);
         _replayMenuGO.SetActive(false);
         _gameUIGO.SetActive(false);
+        _creditsUIGO.SetActive(false);
 
         switch (ui)
         {
@@ -40,6 +45,13 @@ public class UIManager : MonoBehaviour
                 break;
             case UIType.Game:
                 _gameUIGO.SetActive(true);
+                break;
+            case UIType.Credits:
+                if (_showingCredits)
+                    _mainMenuGO.SetActive(true);
+                else
+                    _creditsUIGO.SetActive(true);
+                _showingCredits = !_showingCredits;
                 break;
         }
     }
