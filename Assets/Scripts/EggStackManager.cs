@@ -14,6 +14,7 @@ public class EggStackManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private GameObject _reticle;
     [SerializeField] private ParticleSystem _crackParticles;
+    [SerializeField] private GameObject _newHighScoreIndicatorGO;
 
     private int StackCount
     {
@@ -27,7 +28,7 @@ public class EggStackManager : MonoBehaviour
     }
     private int _stackCount;
     private int _functionalStackCount;
-
+    private int _bestStackCount;
 
     private Vector2 _gridDimensions = new Vector2(10, 8);
     private int _maxEggsPerGroup;
@@ -65,7 +66,17 @@ public class EggStackManager : MonoBehaviour
         }
         else
         {
-            _scoreText.text = "Final Score: " + _stackCount;
+            if (StackCount > _bestStackCount)
+            {
+                _bestStackCount = StackCount;
+                _newHighScoreIndicatorGO.SetActive(true);
+            }
+            else
+            {
+                _newHighScoreIndicatorGO.SetActive(false);
+            }
+
+            _scoreText.text = "Final Score: " + _stackCount + "   |   Best: " + _bestStackCount;
         }
     }
 

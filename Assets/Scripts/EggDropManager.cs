@@ -14,6 +14,7 @@ public class EggDropManager : MonoBehaviour
     private bool _canDrop;
     private float _dropTimer;
     private float _dropDelayMax;
+    private bool _canSpeedUp;
 
     private System.Diagnostics.Stopwatch _speedUpStopwatch = new System.Diagnostics.Stopwatch();
     private float _speedUpDelay = 1000 * 10;
@@ -33,6 +34,7 @@ public class EggDropManager : MonoBehaviour
     {
         if (isPlaying)
         {
+            _canSpeedUp = true;
             _dropDelayMax = 2f; // 2
             _dropTimer = _dropDelayMax;
             _eggListIndex = 0;
@@ -71,19 +73,22 @@ public class EggDropManager : MonoBehaviour
             egg.Setup();
             egg.Drop();
 
-            _dropTimer = _dropDelayMax;
+            _dropTimer = _dropDelayMax + Random.Range(-0.2f, 0.4f);
+            Debug.Log(_dropTimer);
         }
 
-        if (_speedUpStopwatch.ElapsedMilliseconds > _speedUpDelay)
+        if (_canSpeedUp && _speedUpStopwatch.ElapsedMilliseconds > _speedUpDelay)
         {
             if (_dropDelayMax < 0.5f)
             {
                 _speedUpStopwatch.Stop();
+                _canSpeedUp = false;
             }
             else
             {
                 _dropDelayMax -= 0.2f;
                 _speedUpStopwatch.Restart();
+                Debug.Log("speed up");
             }
         }
     }

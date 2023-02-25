@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static event System.Action<bool> SetPlaying;
 
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private bool _skipMenu;
 
     private void Awake()
     {
@@ -20,7 +21,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _uiManager.SetUI(UIManager.UIType.Intro);
-        //StartGame();
+
+#if UNITY_EDITOR
+        if(_skipMenu)
+            StartGame();
+#endif
     }
 
     public void StartGame()

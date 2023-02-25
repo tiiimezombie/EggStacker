@@ -131,11 +131,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprites_0
+      name: egg
       rect:
         serializedVersion: 2
-        x: 8
-        y: 919
+        x: 9
+        y: 406
         width: 88
         height: 96
       alignment: 0
@@ -155,8 +155,8 @@ TextureImporter:
       name: Sprites_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 960
+        x: 128
+        y: 447
         width: 88
         height: 56
       alignment: 0
@@ -176,8 +176,8 @@ TextureImporter:
       name: Sprites_2
       rect:
         serializedVersion: 2
-        x: 247
-        y: 960
+        x: 248
+        y: 447
         width: 48
         height: 56
       alignment: 0
@@ -197,8 +197,8 @@ TextureImporter:
       name: Sprites_3
       rect:
         serializedVersion: 2
-        x: 311
-        y: 944
+        x: 312
+        y: 431
         width: 48
         height: 72
       alignment: 0
@@ -218,8 +218,8 @@ TextureImporter:
       name: Sprites_4
       rect:
         serializedVersion: 2
-        x: 386
-        y: 955
+        x: 387
+        y: 442
         width: 48
         height: 56
       alignment: 0
@@ -239,8 +239,8 @@ TextureImporter:
       name: Sprites_5
       rect:
         serializedVersion: 2
-        x: 127
-        y: 896
+        x: 128
+        y: 383
         width: 88
         height: 48
       alignment: 0
@@ -260,8 +260,8 @@ TextureImporter:
       name: Sprites_6
       rect:
         serializedVersion: 2
-        x: 247
-        y: 904
+        x: 248
+        y: 391
         width: 56
         height: 40
       alignment: 0
@@ -281,8 +281,8 @@ TextureImporter:
       name: Sprites_7
       rect:
         serializedVersion: 2
-        x: 311
-        y: 880
+        x: 312
+        y: 367
         width: 56
         height: 56
       alignment: 0
@@ -302,8 +302,8 @@ TextureImporter:
       name: Sprites_8
       rect:
         serializedVersion: 2
-        x: 384
-        y: 893
+        x: 385
+        y: 380
         width: 48
         height: 48
       alignment: 0
@@ -320,181 +320,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reticle 1
+      name: reticle1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 825
+        x: 62
+        y: 312
         width: 41
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b796fbcb1311a0a4eb30f8713d34fc2d
-      internalID: 714342459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 2
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 823
-        width: 43
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 752263b47ed2b284a824d82b7b0524cf
-      internalID: -1752926295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 8
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 776
-        width: 25
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b1f1045b65613c4abc867b70cc3055e
-      internalID: -1125045339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 3
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 776
-        width: 24
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed4e32af4c9a701488c3e1939e66160d
-      internalID: 665976579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 7
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 719
-        width: 24
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1dc9eb21d6a25c14092e92967c1e6549
-      internalID: 131124071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 4
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 721
-        width: 22
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9d10e3c8cb83004f8378c63f4e4dd2f
-      internalID: -1252215216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 6
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 691
-        width: 43
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e9d412e98fe7754aa34b4c1af3ef23a
-      internalID: -84171711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reticle 5
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 691
-        width: 44
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5709600ee39068c4598aff876b71619f
-      internalID: 1730994088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprites_9
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 765
-        width: 88
-        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,22 +341,211 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gauntlet
+      name: reticle2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 505
-        width: 313
-        height: 168
+        x: 117
+        y: 310
+        width: 43
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 81, y: 84, z: 225, w: 84}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f991351598a3e814688a609325fbc3cc
-      internalID: 2047245974
+      spriteID: 602bb47e8e4fbf647aad3457b4587fef
+      internalID: -387555074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 256
+        width: 88
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f802dd7555a4c2443a0e25062cd29d8f
+      internalID: -136857509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crown
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 230
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a6fca4fd7628e4a9eb10bbfe681793
+      internalID: 1096116237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 263
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87e888033911354592a9c183bdbb8c3
+      internalID: 1922464594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 263
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d733d4662121a4d4dbb76e4f9ed5dde4
+      internalID: -220670429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 206
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f48cab603129334dada1bb364e09577
+      internalID: 263862566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 207
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af317c6f52eab04f935ee14431d44f3
+      internalID: 524822609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle6
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 178
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9612e22180db448819b17cb2fd0c9f
+      internalID: 171216533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reticle5
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 178
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533c33693ccad03419fedd9623b56cc6
+      internalID: 785700269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 8
+        width: 312
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d180c10b0d2b2a3498508e0c75d41dea
+      internalID: 751730235
       vertices: []
       indices: 
       edges: []
@@ -540,25 +561,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprites_9: 1323345653
+      reticle2: -387555074
+      heart: -136857509
       Sprites_2: 1855695242
       Sprites_7: -1238474789
       Sprites_3: 1298057146
       Sprites_6: 1632759327
-      Reticle 6: -84171711
       Sprites_5: -1843200318
-      Reticle 4: -1252215216
-      Sprites_0: 2023374020
-      Reticle 5: 1730994088
-      gauntlet: 2047245974
+      crown: 1096116237
+      reticle7: 263862566
+      reticle6: 171216533
       Sprites_4: 733224221
-      Reticle 8: -1125045339
-      Reticle 7: 131124071
-      Reticle 2: -1752926295
+      reticle3: -220670429
+      egg: 2023374020
+      Sprites_19: 751730235
+      reticle5: 785700269
       Sprites_8: -1282004198
-      Reticle 3: 665976579
+      reticle4: 524822609
+      reticle8: 1922464594
       Sprites_1: 2120120116
-      Reticle 1: 714342459
+      reticle1: 1323345653
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
