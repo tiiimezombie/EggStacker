@@ -6,8 +6,10 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    // Player
     [SerializeField] private AudioSource _audioSource1;
 
+    // Clips
     [SerializeField] private AudioClip _buttonClip;
     [SerializeField] private AudioClip _tzClip;
     [SerializeField] private AudioClip _grabClip;
