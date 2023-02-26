@@ -76,7 +76,7 @@ public class EggStackManager : MonoBehaviour
                 _newHighScoreIndicatorGO.SetActive(false);
             }
 
-            _scoreText.text = "Final Score: " + _stackCount + "   |   Best: " + _bestStackCount;
+            _scoreText.text = "Final Score: " + _stackCount + "      Best: " + _bestStackCount;
         }
     }
 
